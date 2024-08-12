@@ -1,0 +1,84 @@
+<div class="row">
+    <main class="col-md-12">
+        <br>
+        <h2>{{viewData.student.firstName}} {{viewData.student.lastName}} - Student: {{viewData.student.studentNum}}</h2>
+        <hr />
+
+        <form method="post" action="/student/update">
+            <input type="hidden" name="studentNum" value="{{viewData.student.studentNum}}" />
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstName" value="{{viewData.student.firstName}}" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastName" value="{{viewData.student.lastName}}" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="{{viewData.student.email}}" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="addressStreet">Address (Street)</label>
+                        <input type="text" id="addressStreet" name="addressStreet" value="{{viewData.student.addressStreet}}" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="addressCity">Address (City)</label>
+                        <input type="text" id="addressCity" name="addressCity" value="{{viewData.student.addressCity}}" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="addressProvince">Address (Province)</label>
+                        <input type="text" id="addressProvince" name="addressProvince" value="{{viewData.student.addressProvince}}" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Academic Information</h2>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="TA">College Employment</label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="teachingAssistant" name="TA" value="teachingAssistant" {{#if viewData.student.TA}}checked{{/if}}>
+                            Teaching Assistant
+                        </label>
+                    </div>
+                    <div class="form-column">
+                        <label for="status">Enrollment Status</label>
+                        <label class="checkbox-label">
+                            <input type="radio" id="fullTime" name="status" value="Full Time" {{#equal viewData.student.status "Full Time" }}checked{{/equal}} required>
+                            Full Time
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" id="partTime" name="status" value="Part Time" {{#equal viewData.student.status "Part Time" }}checked{{/equal}} required>
+                            Part Time
+                        </label>
+                    </div>
+                    <div class="form-column">
+                        <label for="course">Enrolled in Course</label>
+                        {{#if viewData.courses}}
+                            <select class="form-control" name="course" id="course">
+                            <option value="">Select Course</option>
+                            {{#each viewData.courses}}
+                                <option value="{{courseId}}" {{#if selected}} selected {{/if}} >{{courseCode}} </option>
+                            {{/each}}
+                            </select>
+                        {{else}}
+                            <div>No Courses</div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <input type="submit" class="btn btn-primary float-right" value="Update Student" /><br /><br /><br />
+        </form>
+    </main>
+</div>

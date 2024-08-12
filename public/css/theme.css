@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap');
+
+.bg-light{
+    background-color: #e0f7fa !important; 
+    -webkit-box-shadow: 0px 1px 9px 0px rgba(144, 202, 249, 0.75);
+    -moz-box-shadow: 0px 1px 9px 0px rgba(66, 165, 245, 0.75);
+    box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-light .navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px gray;
+    font-size:30px;
+    color:#00796b;
+}
+
+a.nav-link{
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html{
+    background: #e3f2fd; /* fallback color */
+    background: linear-gradient( to bottom, #bbdefb, #e3f2fd);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.btn-primary{
+    background-color: #64b5f6;
+    border-color: #0288d1;
+}
+
+.btn-primary:hover{
+    background-color: #42a5f5;
+    border-color: #0277bd;
+}
+
+/* table style */
+
+table.table tr:nth-child(odd) td{
+    background-color: #c8e6c9;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 2px gray;
+}
+
+a{
+    color: #0288d1;
+}
+
+a:hover{
+    color: #01579b;
+}
+
+/* Form Styles */
+
+legend{
+    text-shadow: 1px 1px 2px gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffc4ec; /* Background color */
+    margin: 0;
+    padding: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3e5fc; /* Matching header background color */
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #004d40; /* Darker color for header text */
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #004d40; /* Darker color for nav links */
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #00796b; /* Matching color for section title */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #b3e5fc; /* Header background color */
+    color: #004d40; /* Header text color */
+}
+
+td {
+    background-color: #e0f7fa; /* Row background color */
+    color: #004d40; /* Row text color */
+}
+
+tr:hover {
+    background-color: #b3e5fc; /* Hover background color */
+}
